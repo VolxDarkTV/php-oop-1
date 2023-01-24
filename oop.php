@@ -1,9 +1,9 @@
 <?php
 // CLASS
 class Movie{
-    public $title = "";
-    public $protagonist = "";
-    public $date = "";
+    public $title;
+    public $protagonist;
+    public $date;
     public function __construct($title, $protagonist, $date){
         $this->title = $title;
         $this->protagonist = $protagonist;
@@ -19,6 +19,7 @@ class Movie{
         . "Date: " . $this->date . '</span>';
     }
 }
+
 // OBJECT
 $movies = [new Movie("Spider-Man: Homecoming", "Tom Holland", "2017"), new Movie("Il Gladiatore", "Russel Crowe", "2000"), new Movie("Lo Spartano", "Russel Crowe", "2008"), new Movie("Spider-Man: Far from Home", "Tom Holland", "2019"), new Movie("Il Gladiatore", "Russel Crowe", "2000"), new Movie("Lo Spartano", "Russel Crowe", "2008")];
 
