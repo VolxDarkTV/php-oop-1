@@ -4,12 +4,10 @@ class Movie{
     public $title;
     public $protagonist;
     public $date;
-    public $genre;
-    public function __construct($title, $protagonist, $date, $genre){
+    public function __construct($title, $protagonist, $date){
         $this->title = $title;
         $this->protagonist = $protagonist;
         $this->date = $date;
-        $this->genre = $genre;
     }
     public function getHTML(){
 
@@ -18,30 +16,18 @@ class Movie{
         . "<br>" 
         . "Protagonist: " . $this->protagonist
         . "<br>"
-        . "Date: " . $this->date . $this->genre->getHTMLGenre() . '</span>';
+        . "Date: " . $this->date . '</span>';
     }
 }
-class Genre{
-    public $name;
 
-    public function __construct($name){
-        $this->name = $name;
-    }
-    public function getHTMLGenre(){
-        return '<span>' . "<br>" . $this->name . '</span>';
-    }
-}
-// Genre
-$genre1 = new Genre("fantasy");
 // OBJECT
-$movies = [
-        new Movie("Spider-Man: Homecoming", "Tom Holland", "2017", $genre1), 
-        new Movie("Spider-Man: Homecoming", "Tom Holland", "2017", $genre1), 
-        new Movie("Il Gladiatore", "Russel Crow", "2000", $genre1)
-    ];
+$movies = [new Movie("Spider-Man: Homecoming", "Tom Holland", "2017"), new Movie("Il Gladiatore", "Russel Crowe", "2000"), new Movie("Lo Spartano", "Russel Crowe", "2008"), new Movie("Spider-Man: Far from Home", "Tom Holland", "2019"), new Movie("Il Gladiatore", "Russel Crowe", "2000"), new Movie("Lo Spartano", "Russel Crowe", "2008")];
+
 // PRINT ON SCREEN
 foreach($movies as $movie){
     echo "<br><br>";
     echo $movie->getHTML();
 }
+
+
 ?>
