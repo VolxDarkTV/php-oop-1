@@ -16,14 +16,17 @@ class Movie{
         . "<br>" 
         . "Protagonist: " . $this->protagonist
         . "<br>"
-        . "Date: " . $this->date . '</span>'
-        . "<br><br>";
+        . "Date: " . $this->date . '</span>';
     }
 }
 // OBJECT
-$movie1 = new Movie("Spider-Man: Homecoming", "Tom Holland", "2017");
-$movie2 = new Movie("Il Gladiatore", "Russel Crowe", "2000");
+$movies = [new Movie("Spider-Man: Homecoming", "Tom Holland", "2017"), new Movie("Il Gladiatore", "Russel Crowe", "2000"), new Movie("Lo Spartano", "Russel Crowe", "2008"), new Movie("Spider-Man: Far from Home", "Tom Holland", "2019"), new Movie("Il Gladiatore", "Russel Crowe", "2000"), new Movie("Lo Spartano", "Russel Crowe", "2008")];
 
 // PRINT ON SCREEN
-echo $movie1->getHTML(), $movie2->getHTML();
+foreach($movies as $movie){
+    echo "<br><br>";
+    echo $movie->getHTML();
+}
+
+
 ?>
