@@ -1,5 +1,5 @@
 <?php
-// Classe
+// CLASS
 class Movie{
     public $title = "";
     public $protagonist = "";
@@ -11,17 +11,19 @@ class Movie{
     }
     public function getHTML(){
 
-        return '<h4>' 
+        return '<span>' 
         . "Title: " . $this->title 
         . "<br>" 
         . "Protagonist: " . $this->protagonist
         . "<br>"
-        . "Date: " . $this->date . '</h4>';
+        . "Date: " . $this->date . '</span>'
+        . "<br><br>";
     }
 }
-// OGGETTI
-$movie1 = new Movie("Homecoming", "Holland", "2018");
-// $spiderman -> title = "Homecoming";
+// OBJECT
+$movie1 = new Movie("Spider-Man: Homecoming", "Tom Holland", "2017");
+$movie2 = new Movie("Il Gladiatore", "Russel Crowe", "2000");
 
-echo $movie1->getHTML();
+// PRINT ON SCREEN
+echo $movie1->getHTML(), $movie2->getHTML();
 ?>
