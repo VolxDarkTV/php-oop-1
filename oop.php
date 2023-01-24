@@ -18,7 +18,8 @@ class Movie{
         . "<br>" 
         . "Protagonist: " . $this->protagonist
         . "<br>"
-        . "Date: " . $this->date . $this->genre->getHTMLGenre() . '</span>';
+        . "Date: " . $this->date . $this->genre->getHTMLGenre() 
+        . '</span>';
     }
 }
 class Genre{
@@ -28,11 +29,16 @@ class Genre{
         $this->name = $name;
     }
     public function getHTMLGenre(){
-        return '<span>' . "<br>" . $this->name . '</span>';
+        return '<span>' 
+        . "<br>" 
+        . "Genre: " 
+        . $this->name 
+        . '</span>';
     }
 }
 // Genre
-$genre1 = new Genre("fantasy");
+$genre1 = new Genre("Action");
+$genre2 = new Genre("Fantasy");
 // OBJECT
 $movies = [
         new Movie("Spider-Man: Homecoming", "Tom Holland", "2017", $genre1), 
