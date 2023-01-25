@@ -1,0 +1,27 @@
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.title{
+    display: flex;
+    justify-content: center;
+
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+.container_movie{
+    display: flex;
+    gap: 20px;
+}
+.movie_style{
+    width: calc(100% / 3 - 20px);
+    padding: 20px;
+    border: solid rgb(82, 38, 214) 5px;
+    border-radius: 50px;
+}

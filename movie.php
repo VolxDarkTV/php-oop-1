@@ -12,8 +12,8 @@ class Movie{
     }
     public function getHTML(){
 
-        return '<span>' 
-        . "Title: " . $this->title 
+        return '<span class="movie_style">' 
+        . "<h4>" . "Title: " . $this->title . "</h4>"
         . "<br>" 
         . "Protagonist: " . $this->protagonist
         . "<br>"
